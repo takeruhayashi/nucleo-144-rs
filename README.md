@@ -10,3 +10,7 @@ cargo run --bin led
 ```
 cargo run --bin button
 ```
+### Ethernet Example
+```
+cargo run --bin ethernet
+```
