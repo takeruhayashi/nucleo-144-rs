@@ -8,7 +8,7 @@ cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
 cortex-m-rt = "0.7.5"
 defmt = "1.0.1"
 defmt-rtt = "1.0.0"
-embassy-executor = { version = "0.7.0", features = ["arch-cortex-m", "defmt", "executor-thread"] }
+embassy-executor = { version = "0.7.0", features = ["arch-cortex-m", "defmt", "executor-thread", "task-arena-size-65536"] }
 embassy-net = { version = "0.7.0", features = ["defmt", "medium-ethernet", "proto-ipv4", "tcp"] }
 embassy-stm32 = { version = "0.2.0", features = ["defmt", "exti", "memory-x", "stm32h563zi", "time-driver-any"] }
 embassy-time = { version = "0.4.0", features = ["defmt"] }
