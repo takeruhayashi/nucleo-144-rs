@@ -6,7 +6,7 @@ use {defmt_rtt as _, panic_probe as _};
 use embassy_executor::Spawner;
 use embassy_stm32::{adc::AdcChannel, Config};
 use embassy_stm32::rcc::{mux, HSIPrescaler, Pll, PllSource, PllDiv, PllPreDiv, PllMul, Sysclk, AHBPrescaler, APBPrescaler, VoltageScale};
-use embassy_stm32::adc::{Adc, SampleTime, Resolution, VrefInt};
+use embassy_stm32::adc::{Adc, SampleTime, Resolution};
 use embassy_time::Timer;
 
 #[embassy_executor::main]
