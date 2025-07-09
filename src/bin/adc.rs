@@ -44,8 +44,6 @@ async fn main(_spawner: Spawner) {
     let mut adc = Adc::new(p.ADC1);
     adc.set_sample_time(SampleTime::CYCLES24_5);
     adc.set_resolution(Resolution::BITS12);
-    // let resolution = Resolution::BITS12.to_bits();
-
     let mut vrefint_channel = adc.enable_vrefint();
     let mut temp_channel = adc.enable_temperature();
 
@@ -58,9 +56,6 @@ async fn main(_spawner: Spawner) {
         let vsense = (temp_raw as f32 * vref) / 4095.0;
         let temp = (((0.62 - vsense) * 1000.0) / 2.0) + 30.0;
         info!("temp raw: {}, vsense: {}, temp: {}", temp_raw, vsense, temp);
-
-        // let measured = adc.blocking_read(&mut p.PA0);
-        // info!("measured: {}", measured);
 
         Timer::after_secs(5).await;
     }
